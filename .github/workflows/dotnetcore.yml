@@ -18,7 +18,9 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore && dotnet add package Microsoft.NETFramework.ReferenceAssemblies --version 1.0.0
+      run: dotnet restore 
+    - name: Install Framework
+      run: dotnet add package Microsoft.NETFramework.ReferenceAssemblies --version 1.0.0
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
