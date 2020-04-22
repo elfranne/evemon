@@ -19,6 +19,8 @@ jobs:
         dotnet-version: 3.1.101
     - name: Install dependencies
       run: dotnet restore
+    - name: .NetFramework Action Template
+      uses: auycro/netframework-action-template@v0.0.2
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
